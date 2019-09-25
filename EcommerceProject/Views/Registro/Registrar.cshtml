@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Registrarse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="breadcrumbs">
+    <ul>
+        <li>@Html.ActionLink("Inicio", "Index", "Home") / </li>
+        <li>Registro de cliente</li>
+    </ul>
+</div>
+<div class="login-page">
+    <h2>Datos de cliente</h2>
+    <div class="row" style="text-align: left;">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="block">
+                @*<h4 class="title">Contacto</h4>*@
+                <div class="block-inside">
+                    <div id="customer_additional_fields">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="contact_name" class="field text-field">
+                                        <label for="customer_name" class="control-label">Nombre <em>*</em></label>
+                                        <input type="text" name="customer[name]" value="" id="customer_name" class="text form-control" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="contact_name" class="field text-field">
+                                        <label for="customer_app" class="control-label">Apellido paterno <em>*</em></label>
+                                        <input type="text" name="customer[app]" value="" id="customer_app" class="text form-control" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="contact_apm" class="field text-field">
+                                        <label for="customer_apm" class="control-label">Apellido materno <em>*</em></label>
+                                        <input type="text" name="customer[apm]" value="" id="customer_apm" class="text form-control" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="customer_contacts">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <div id="contacts_email" class="field text-field">
+                                        <label for="customer_email" class="control-label">Correo electrónico <em>*</em></label>
+                                        <input type="email" name="customer[email]" value="" id="customer_email" class="text form-control" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div id="contacts_phone" class="field text-field">
+                                        <label for="customer_phone" class="control-label">Teléfono </label>
+                                        <input type="tel" name="customer[phone]" value="" id="customer_phone" class="text form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="contacts_birthday" class="field text-field">
+                                        <label for="customer_phone" class="control-label">Fecha de nacimiento <em>*</em></label>
+                                        <input type="date" name="customer[birthday]" value="" id="customer_birthday" class="text form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="customer_details_password">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="details_password" class="field text-field">
+                                        <label for="customer_details_password" class="control-label">Contraseña <em>*</em></label>
+                                        <input type="password" name="customer[password]" id="customer_password" class="text form-control" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div id="details_confirm_password" class="field text-field">
+                                        <label for="customer_details_confirm_password" class="control-label">Confirmar Contraseña <em>*</em></label>
+                                        <input type="password" name="customer[password_confirmation]" id="customer_password_confirmation" class="text form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="text-align: right;">
+                                <div class="form-group control-label">
+                                    <p class="required" style=" font-weight:bold !important;">* Campos obligatorios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4">
+                                <input type="submit" value="Confirmar" class="button btn btn-block btn-success" id="register_customer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

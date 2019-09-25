@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Información de Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <ul>
+        <li>@Html.ActionLink("Inicio", "Index", "Home") / </li>
+        <li>@Html.ActionLink("Productos", "Productos", "Productos") / </li>
+        <li>Batido</li>
+    </ul>
+</div>
+<div class="info-product-page">
+    <div class="row">
+        <div class="col-lg-6 col-md-7 col-12 mb-3">
+            <!-- NEW CAROUSEL -->
+            <!-- There's no image available -->
+            <div class="product-page-image">
+                <img class="img-hover" src="~/images/batido.jpg" alt="batido">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-5 col-12 pb-5" style="text-align: left;">
+            <div class="row mb-3 d-md-none">
+                <!-- Brand Price Title mobile -->
+                <div class="col-12">
+                    <h2 class="product-name">Batido</h2>
+                </div>
+                <div class="col-12 price_elem" style="text-align: center;">
+                    <span class="product-form-price form-price" id="product-form-price">$0.00</span>
+                </div>
+            </div>
+
+            <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data" name="buy">
+                <br />
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <!-- Product Categories  -->
+                        <!-- Product Description -->
+
+                        <div class="form-group description">
+                            <label class="form-control-label">Descripción:</label>
+                            <p>contenido natural de fresa&nbsp;</p>
+                        </div>
+
+                        <!-- Out of Stock -->
+                        <div class="form-group product-stock product-out-stock row ">
+                            <label class="col-12 form-control-label">Disponibilidad</label>
+                            <div class="col-12">
+                                <span style="font-size: 1.75rem; font-weight: bold;">Agotado</span>
+                                <p style="font-size: 1.2rem !important;">Este producto se ha quedado sin stock. Puedes consultarnos al respecto..</p>
+                                @Html.ActionLink("Contáctanos", "Contact", "Home")
+                            </div>
+                        </div>
+                        <!-- Not Available -->
+                        <div class="form-group product-stock product-unavailable row hidden">
+                            <label class="col-3 form-control-label">Disponibilidad:</label>
+                            <div class="col-9">
+                                <span class="product-form-price">No Disponible</span>
+                                <p>Este producto no está disponible. Puedes consultarnos al respecto..</p>
+                                <a href="/contact" class="butn" title="Contáctanos">Contáctanos</a>
+                                <a href="javascript:history.back()" class="mt-2" title="← o Continúa Comprando">← o Continúa Comprando</a>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group row">
+                            <label class="col-3 form-control-label"></label>
+                            <br />
+                            <div class="col-md-4 col-md-offset-2">
+                                <div class="quantity">
+                                    <input type="number" class="qty form-control" id="input-qty" name="qty" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="input-group">
+                                    <button type="submit" class="btn btn-block btn-success">
+                                        <span>
+                                            <i class="fa fa-cart-plus"></i>
+                                        </span> Añadir al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        @Html.ActionLink("<< Continuar comprando", "Productos", "Productos")
+                        <!-- Product stock -->
+
+
+
+                        @*<div id="product-sharing" class="form-group row">
+                            <div class="col-12">
+                                <label class="form-control-label">Compartir</label>
+                                <div class="social-networks">
+
+                                    <div class="item">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://skiller.jumpseller.com/batido-de-fresa" class="has-tip tip-top radius button tiny button-facebook" title="Compartir en Facebook" target="_blank" data-tooltip="">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="item">
+                                        <a href="https://twitter.com/share?url=https://skiller.jumpseller.com/batido-de-fresa&amp;text=Mira este producto batido de fresa" class="has-tip tip-top radius button tiny button-twitter" title="Compartir en Twitter" target="_blank" data-tooltip="">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                    <!-- end product sharing -->
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
